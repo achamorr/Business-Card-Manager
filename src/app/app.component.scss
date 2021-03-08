@@ -3,16 +3,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 
-
 .container {
-    display: flex;
-    justify-content: space-between;
     width: 100vw;
     font-family: 'Montserrat', sans-serif;
-    .title {  
-        margin: 16px;
+    display: flex; //use flex-box
+    justify-content: center;
+    flex-wrap: wrap;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        .title {  
+            margin: 16px;
+        }
+        .plus-button {
+            margin: 16px;
+        }
+        .edit-button {
+            margin: 16px;
+        }
     }
-    .plus-button {
-        margin: 16px;
+    .card-container {
+        width: 80vw; //viewport width
     }
+    swiper{ //access element itself
+        height: 80vh;
+        .card-img {
+            width: 80vw; //of container
+        }
+    }
+    
+
 }

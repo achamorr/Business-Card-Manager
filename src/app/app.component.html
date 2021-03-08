@@ -1,10 +1,29 @@
 
 <div class="container">
-  <h1 class="title">Cards</h1>
-  <button (click)="addCard()" class="plus-button">Add Card</button>
-</div>
+  <div class="header">
+    <h1 class="title">Business Cards</h1>
+    <button (click)="addCard()" class="plus-button">Add Card</button>
+    <button (click)="editCard()" class="edit-button">Edit Cards</button>
+  </div>
 
-<div *ngFor="let card of cards">
-  {{card.name}}
-  {{1+1}}
+
+  <!-- <div *ngFor="let card of cards">
+    <div class="card-container">
+      <img class="card-img" src={{card.image}}/>
+    </div>
+  </div> -->
+  
+  <!-- <carousel>
+    <div class="carousel-cell card-container" *ngFor="let card of cards">
+        <img class="card-img" src={{card.image}}/>
+    </div>
+  </carousel> -->
+
+  <!-- ng-template is an empty div. ususally used for wrappers -->
+
+  <swiper direction="vertical">
+    <ng-template swiperSlide *ngFor="let card of cards">
+      <img class="card-img" src={{card.image}}/>
+    </ng-template>
+  </swiper>
 </div>
